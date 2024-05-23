@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTrove - Современные мониторы для любых задач</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>TechTrove</h1>
+        <p>Современные мониторы для любых задач</p>
+    </header>
+    <main>
+        <h2>Найдите идеальный монитор!</h2>
+        <div class="filters">
+            <label for="priceRange">Цена: <span id="priceValue">50000</span> рублей</label>
+            <input type="range" id="priceRange" min="10000" max="100000" value="50000" step="5000" oninput="updatePriceValue()">
+            <button onclick="filterProducts('favorite')">Показать избранное</button>
+            <button onclick="filterProducts('new')">Показать Новинки</button>
+            <button onclick="filterProducts('all')">Показать всё</button>
+        </div>
+        <div class="product-gallery">
+            <div class="product" data-price="50000" data-favorite="false" data-new="true">
+                <img src="monitor1.jpg" alt="Монитор 1">
+                <h3>Монитор "Профессионал"</h3>
+                <p>Высокое качество изображения для профессиональной работы.</p>
+                <p>Цена: 50000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="40000" data-favorite="false" data-new="false">
+                <img src="monitor2.jpg" alt="Монитор 2">
+                <h3>Монитор "Геймер"</h3>
+                <p>Высокая частота обновления для идеального геймплея.</p>
+                <p>Цена: 40000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="30000" data-favorite="false" data-new="true">
+                <img src="monitor3.jpg" alt="Монитор 3">
+                <h3>Монитор "Универсал"</h3>
+                <p>Отличный выбор для дома и офиса.</p>
+                <p>Цена: 30000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="60000" data-favorite="false" data-new="false">
+                <img src="monitor4.jpg" alt="Монитор 4">
+                <h3>Монитор "4K"</h3>
+                <p>Отличное разрешение для просмотра фильмов и игр.</p>
+                <p>Цена: 60000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="70000" data-favorite="false" data-new="true">
+                <img src="monitor5.jpg" alt="Монитор 5">
+                <h3>Монитор "Геймер Про"</h3>
+                <p>Для профессиональных игроков и энтузиастов.</p>
+                <p>Цена: 70000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="20000" data-favorite="false" data-new="false">
+                <img src="monitor6.jpg" alt="Монитор 6">
+                <h3>Монитор "Эконом"</h3>
+                <p>Хорошее качество по доступной цене.</p>
+                <p>Цена: 20000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
